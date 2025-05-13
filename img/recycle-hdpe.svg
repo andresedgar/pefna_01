@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M30 5L55 20V40L30 55L5 40V20L30 5Z" stroke="#00E676" stroke-width="2"/>
+  <text x="30" y="35" font-family="Arial" font-size="12" fill="#00E676" text-anchor="middle">2</text>
+  <path d="M20 40H40M20 45H40" stroke="#00E676" stroke-width="1.5"/>
+</svg>

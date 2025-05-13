@@ -1,0 +1,312 @@
+/*
+ * PEFNA - Responsive Styles
+ * 
+ * Contains media queries and responsive adjustments
+ */
+
+/* Breakpoints
+ * Mobile: < 768px
+ * Tablet: 768px - 1024px
+ * Desktop: > 1024px
+ */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  :root {
+    --font-size-jumbo: 56px;
+    --font-size-xxxl: 40px;
+    --font-size-xxl: 28px;
+    --space-xxl: 48px;
+  }
+  
+  .container {
+    padding: 0 var(--space-lg);
+  }
+  
+  /* Navbar */
+  .nav-menu {
+    gap: var(--space-md);
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: 160px 0 100px;
+  }
+  
+  /* Vision */
+  .big-year {
+    font-size: 150px;
+  }
+  
+  /* Business Cards */
+  .business-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Careers */
+  .careers-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .careers-images {
+    order: 2;
+  }
+  
+  .careers-text {
+    order: 1;
+  }
+  
+  /* Contact */
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  /* Footer */
+  .footer-links {
+    gap: var(--space-lg);
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  :root {
+    --font-size-jumbo: 40px;
+    --font-size-xxxl: 32px;
+    --font-size-xxl: 24px;
+    --font-size-xl: 20px;
+    --space-xl: 32px;
+    --space-lg: 24px;
+  }
+  
+  /* Navbar */
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    flex-direction: column;
+    background-color: var(--bg-dark);
+    width: 80%;
+    height: 100vh;
+    padding: 80px var(--space-lg) var(--space-lg);
+    transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    justify-content: flex-start;
+    gap: var(--space-lg);
+  }
+  
+  .nav-menu.active {
+    right: 0;
+  }
+  
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  .nav-menu li {
+    width: 100%;
+  }
+  
+  .nav-menu li a {
+    display: block;
+    padding: var(--space-xs) 0;
+    font-size: var(--font-size-base);
+  }
+  
+  .btn-container {
+    margin-top: var(--space-md);
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: 120px 0 80px;
+    text-align: center;
+  }
+  
+  .hero-content {
+    margin: 0 auto;
+  }
+  
+  .main-heading {
+    margin-bottom: var(--space-md);
+  }
+  
+  /* About Section */
+  .about-section .container {
+    text-align: center;
+  }
+  
+  .section-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Vision */
+  .vision-section {
+    text-align: center;
+  }
+  
+  .big-year {
+    font-size: 100px;
+    position: static;
+    transform: none;
+    display: block;
+    margin-bottom: var(--space-md);
+  }
+  
+  .vision-card {
+    margin: 0 auto;
+    border-left: none;
+    border-top: 4px solid var(--color-primary);
+  }
+  
+  /* Products */
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Business Lines */
+  .business-cards {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  /* Materials */
+  .materials-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+  
+  /* Sustainability */
+  .commitment-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Recycling */
+  .recycling-symbols {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  
+  /* Contact Form */
+  #quotation-form {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Animation Enhancements */
+@media (prefers-reduced-motion: no-preference) {
+  /* Fade In Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Heading Gradient Animation */
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .main-heading, .section-heading::after {
+    background-size: 200% 200%;
+    animation: gradientFlow 6s ease infinite;
+  }
+
+  .hero-content, .product-item, .business-card, .material-item, 
+  .sustainability-card, .commitment-card, .careers-text {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  /* Stagger items in lists */
+  .product-item:nth-child(2),
+  .business-card:nth-child(2),
+  .material-item:nth-child(2),
+  .commitment-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .product-item:nth-child(3),
+  .business-card:nth-child(3),
+  .material-item:nth-child(3),
+  .commitment-card:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  /* Hover Animations */
+  .btn, .product-item, .business-card, .material-item, .careers-images img {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.3s ease;
+  }
+
+  /* Smooth scrolling enhancements */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Account for fixed header */
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .hero-section, .vision-section, .sustainability-section, 
+  .careers-section, .recycling-section {
+    background: white;
+    color: black;
+  }
+  
+  .nav-menu, .footer, .contact-section, 
+  .menu-toggle, .btn {
+    display: none;
+  }
+  
+  .container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .main-heading, .section-heading, .vision-card h3, 
+  .sustainability-card h3, .careers-text h3 {
+    color: black;
+    -webkit-text-fill-color: black;
+  }
+  
+  .section-heading::after {
+    display: none;
+  }
+}
