@@ -1251,7 +1251,7 @@ section {
     }
 
     .materials-header h2 {
-        font-size: var(--font-size-xxxl);
+        font-size: 28px;
     }
 }
 
