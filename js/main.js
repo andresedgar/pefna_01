@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu.addEventListener('click', () => {
       mobileMenu.classList.toggle('active');
       navMenu.classList.toggle('active');
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
     });
   }
   
@@ -17,7 +19,19 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('active');
       navMenu.classList.remove('active');
+      document.body.style.overflow = '';
     });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (navMenu.classList.contains('active') && 
+        !navMenu.contains(e.target) && 
+        !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.remove('active');
+      navMenu.classList.remove('active');
+      document.body.style.overflow = '';
+    }
   });
 
   // Search button functionality
