@@ -863,7 +863,7 @@ section {
 }
 
 .product-text-box {
-    padding: var(--space-xl);
+    padding: var(--space-xxl);
     border-radius: var(--radius-lg);
     margin-bottom: var(--space-xl);
 }
@@ -980,6 +980,7 @@ section {
 .product-text-box {
     padding: var(--space-md);
     border-radius: var(--radius-lg);
+    
     margin-bottom: var(--space-lg);
     color: #061A32;
 }
@@ -1176,7 +1177,7 @@ section {
 .materials-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
+    gap: var(--space-xl);
 }
 
 .material-item {
@@ -1263,6 +1264,11 @@ section {
 }
 
 @media (max-width: 768px) {
+    .materials-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
     .material-item {
         flex-direction: column;
     }
@@ -1270,19 +1276,22 @@ section {
     .material-image {
         flex: 0 0 auto;
         width: 100%;
+        max-width: none;
     }
 
     .material-content {
         width: 100%;
     }
 
+    .material-content h3 {
+        font-size: var(--font-size-lg);
+        margin-top: var(--space-md);
+    }
+
     .read-more {
-        display: inline-block;
-        margin-top: var(--space-sm);
-        font-size: var(--font-size-base);
+        margin-top: var(--space-md);
     }
 }
-
 
 /* Rest of the CSS remains unchanged */
 /* Sustainability Section Styles */
@@ -1496,7 +1505,7 @@ section {
 
 .reciclaje__footer h3{
 		text-align: left;
-		text-decoration:  underline;
+		text-decoration:  underline;
 		font-weight: 300
 }
 
