@@ -48,31 +48,44 @@
 }
 
 /* Image Slider */
+.hero-image {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .image-slider {
     width: 100%;
-    height: 400px;
+    padding-top: 75%; /* 4:3 Aspect Ratio */
     position: relative;
-    overflow: hidden;
     border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-color: var(--bg-dark);
 }
 
 .slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    position: relative;
 }
 
 .slide {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     object-fit: cover;
+    object-position: center;
 }
 
 .slide.active {
     opacity: 1;
+    z-index: 1;
 }
 
 /* What We Do Section */
@@ -183,8 +196,8 @@
         gap: var(--space-xl);
     }
 
-    .image-slider {
-        height: 300px;
+    .hero-image {
+        max-width: 500px;
     }
 }
 
@@ -199,7 +212,7 @@
         font-size: var(--font-size-xxxl);
     }
 
-    .image-slider {
-        height: 250px;
+    .hero-image {
+        max-width: 100%;
     }
 }
