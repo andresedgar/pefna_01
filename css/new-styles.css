@@ -52,11 +52,12 @@
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+    position: relative;
 }
 
 .image-slider {
     width: 100%;
-    padding-top: 75%; /* 4:3 Aspect Ratio */
+    height: 450px;
     position: relative;
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -199,6 +200,10 @@
     .hero-image {
         max-width: 500px;
     }
+
+    .image-slider {
+        height: 375px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -214,5 +219,9 @@
 
     .hero-image {
         max-width: 100%;
+    }
+
+    .image-slider {
+        height: 300px;
     }
 }
