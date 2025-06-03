@@ -5,8 +5,4 @@
 @import 'layout.css';
 @import 'components.css';
 @import 'utilities.css';
-@import 'sections/header.css';
-@import 'sections/hero.css';
-@import 'sections/mission.css';
-@import 'sections/footer.css';
 @import 'responsive.css';
