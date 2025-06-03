@@ -47,6 +47,34 @@
     color: var(--text-light-muted);
 }
 
+/* Image Slider */
+.image-slider {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+}
+
+.slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
 /* What We Do Section */
 .what-we-do-section {
     background-color: var(--bg-light);
@@ -154,6 +182,10 @@
         grid-template-columns: 1fr;
         gap: var(--space-xl);
     }
+
+    .image-slider {
+        height: 300px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -165,5 +197,9 @@
     .what-we-do-text h2,
     .by-your-side-content h2 {
         font-size: var(--font-size-xxxl);
+    }
+
+    .image-slider {
+        height: 250px;
     }
 }

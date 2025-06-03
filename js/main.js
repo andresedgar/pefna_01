@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu.addEventListener('click', () => {
       mobileMenu.classList.toggle('active');
       navMenu.classList.toggle('active');
-      // Prevent body scroll when menu is open
       document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
     });
   }
@@ -39,8 +38,27 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (searchButton) {
     searchButton.addEventListener('click', () => {
-      // Add search modal implementation here
       alert('Search functionality coming soon!');
     });
   }
+
+  // Image Slider
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  // Initialize first slide
+  showSlide(0);
+
+  // Auto-advance slides every 2 seconds
+  setInterval(nextSlide, 2000);
 });
