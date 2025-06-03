@@ -490,7 +490,7 @@ section {
 
 .brand-text {
     font-family: var(--font-family);
-    font-size: 180px;
+    font-size: 80px;
     font-weight: 400;
     background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
     -webkit-background-clip: text;
