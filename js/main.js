@@ -63,6 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (slides.length > 0) {
     showSlide(0);
     // Auto-advance slides every 2 seconds
-    setInterval(nextSlide, 2000);
+    setInterval(nextSlide, 4000);
   }
 });
