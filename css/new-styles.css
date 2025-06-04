@@ -40,10 +40,11 @@
 .industries-text {
     font-family: var(--font-family-text);
     font-size: var(--font-size-lg);
-    color: var(--text-light-muted);
+    color: #27cd71;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
+    font-weight: bold;
 }
 
 .industries-grid {
