@@ -107,7 +107,17 @@
     text-align: center;
     line-height: 1.2;
 }
-
+.brand-text-2 {
+    font-family: var(--font-family);
+    font-size: 200px;
+    font-weight: 400;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    line-height: 1.2;
+}
 /* Image Slider */
 .hero-image {
     width: 100%;
