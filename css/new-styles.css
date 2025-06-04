@@ -207,52 +207,72 @@
     background-color: var(--bg-dark);
     color: var(--text-light);
     padding: var(--space-xxl) 0;
-    border-top: 1px solid var(--text-light);
-    border-bottom: 1px solid var(--text-light);
-}
-
-.by-your-side-content {
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
 }
 
-.by-your-side-content h2 {
+.gradient-title {
     font-family: var(--font-family);
     font-size: var(--font-size-jumbo);
     font-weight: 400;
-    background: linear-gradient(90deg, #63CC7B, #1935DD);
+    background: linear-gradient(90deg, #27cd71, #0C36E6);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-xxl);
+    text-align: center;
 }
 
-.support-grid {
+.locations-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xl);
-    margin-top: var(--space-xxl);
+    margin: var(--space-xxl) 0;
 }
 
-.support-item {
-    background: rgba(255, 255, 255, 0.05);
+.location-card {
     padding: var(--space-xl);
     border-radius: var(--radius-lg);
-    transition: transform var(--transition-normal);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px;
 }
 
-.support-item:hover {
-    transform: translateY(-10px);
+.location-card.blue {
+    background-color: #0C36E6;
 }
 
-.support-item h3 {
-    color: var(--color-primary);
+.location-card.dark {
+    background-color: #061A32;
+}
+
+.location-card.green {
+    background-color: #27cd71;
+}
+
+.location-card h3 {
+    font-family: var(--font-family);
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+    color: var(--text-light);
     margin-bottom: var(--space-md);
 }
 
-.support-item p {
-    color: var(--text-light-muted);
+.location-card p {
+    color: var(--text-light);
+    font-size: var(--font-size-lg);
+    line-height: 1.4;
+}
+
+.locations-description {
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-lg);
+    color: var(--text-light);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: center;
 }
 
 /* Responsive Styles */
@@ -281,6 +301,10 @@
     
     .brand-text {
         font-size: 40px;
+    }
+
+    .locations-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -320,6 +344,19 @@
     }
 
     .service-item p {
+        font-size: var(--font-size-base);
+    }
+
+    .locations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .location-card h3 {
+        font-size: var(--font-size-lg);
+    }
+
+    .location-card p,
+    .locations-description {
         font-size: var(--font-size-base);
     }
 }
