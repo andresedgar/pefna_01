@@ -294,15 +294,16 @@
     font-family: var(--font-family-text);
     font-size: 28px;
     color: #061A32;
-    max-width: 900px;
-    margin: 0 auto 60px;
+    width: 100%;
+    margin: 0 0 60px;
     line-height: 1.6;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100px;
-    padding: 20px;
+    padding: 20px 40px;
+    box-sizing: border-box;
 }
 
 /* Responsive Styles */
@@ -394,5 +395,6 @@
     .locations-additional {
         font-size: 16px;
         min-height: 80px;
+        padding: 15px 20px;
     }
 }
