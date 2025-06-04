@@ -156,7 +156,6 @@
     padding: var(--space-xxl) 0;
     color: var(--text-light);
     border-bottom: 1px solid var(--text-light);
-
 }
 
 .gradient-title {
@@ -274,9 +273,11 @@
     font-size: var(--font-size-lg);
     color: var(--text-light);
     max-width: 900px;
-    margin: 0 auto;
+    margin: var(--space-xl) auto 0;
     line-height: 1.6;
     text-align: center;
+    border-top: 1px solid white;
+    padding-top: var(--space-xl);
 }
 
 /* Responsive Styles */
