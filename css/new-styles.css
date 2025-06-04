@@ -188,12 +188,12 @@
     font-family: var(--font-family);
     font-size: var(--font-size-xl);
     font-weight: 400;
-    color: #27cd71;
+    color: #FFFFFF;
     margin-bottom: var(--space-md);
     padding: var(--space-sm) var(--space-lg);
     border-radius: var(--radius-lg);
     display: inline-block;
-    background-color: rgba(39, 205, 113, 0.1);
+    background-color: #26cf72;
 }
 
 .service-item p {
