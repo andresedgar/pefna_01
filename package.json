@@ -1,7 +1,7 @@
 {
   "name": "pefna-website",
   "private": true,
-  "version": "0.964",
+  "version": "0.965",
   "type": "module",
   "scripts": {
     "dev": "vite",
