@@ -759,7 +759,7 @@ section {
 .mision-heading {
     font-family: var(--font-family);
     font-size: var(--font-size-xxl);
-    font-weight: 700;
+    font-weight: 400;
     color: var(--text-light);
     margin-bottom: var(--space-xl);
     text-align: left;
