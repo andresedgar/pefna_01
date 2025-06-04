@@ -47,6 +47,20 @@
     color: var(--text-light-muted);
 }
 
+.about-brand-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xl);
+}
+
+.brand-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: var(--space-md);
+}
+
 /* Brand Text */
 .brand-text {
     font-family: var(--font-family);
@@ -218,6 +232,10 @@
         height: 375px;
     }
 
+    .brand-logo {
+        width: 150px;
+    }
+    
     .brand-text {
         font-size: 40px;
     }
@@ -242,6 +260,10 @@
         height: 300px;
     }
 
+    .brand-logo {
+        width: 120px;
+    }
+    
     .brand-text {
         font-size: 32px;
     }
