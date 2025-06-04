@@ -47,6 +47,19 @@
     color: var(--text-light-muted);
 }
 
+/* Brand Text */
+.brand-text {
+    font-family: var(--font-family);
+    font-size: 80px;
+    font-weight: 400;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    line-height: 1.2;
+}
+
 /* Image Slider */
 .hero-image {
     width: 100%;
@@ -204,6 +217,10 @@
     .image-slider {
         height: 375px;
     }
+
+    .brand-text {
+        font-size: 60px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -223,5 +240,9 @@
 
     .image-slider {
         height: 300px;
+    }
+
+    .brand-text {
+        font-size: 40px;
     }
 }
