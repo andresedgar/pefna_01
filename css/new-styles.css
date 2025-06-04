@@ -306,101 +306,6 @@
     box-sizing: border-box;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .industries-grid,
-    .support-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .what-we-do-content {
-        grid-template-columns: 1fr;
-        gap: var(--space-xl);
-    }
-
-    .hero-image {
-        max-width: 500px;
-    }
-
-    .image-slider {
-        height: 375px;
-    }
-
-    .brand-logo {
-        width: 150px;
-    }
-    
-    .brand-text {
-        font-size: 40px;
-    }
-
-    .locations-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .industries-grid,
-    .support-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .what-we-do-text h2,
-    .by-your-side-content h2 {
-        font-size: var(--font-size-xxxl);
-    }
-
-    .hero-image {
-        max-width: 100%;
-    }
-
-    .image-slider {
-        height: 300px;
-    }
-
-    .brand-logo {
-        width: 120px;
-    }
-    
-    .brand-text {
-        font-size: 32px;
-    }
-
-    .gradient-title {
-        font-size: var(--font-size-xxxl);
-    }
-
-    .service-item h3 {
-        font-size: var(--font-size-lg);
-    }
-
-    .service-item p {
-        font-size: var(--font-size-base);
-    }
-
-    .locations-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .location-card h3 {
-        font-size: var(--font-size-lg);
-    }
-
-    .location-card p,
-    .locations-description,
-    .locations-additional {
-        font-size: var(--font-size-base);
-    }
-    
-    .locations-additional {
-        font-size: 16px;
-        min-height: 80px;
-        padding: 15px 0;
-    }
-}
-
-
-
 /* Recycling Value Section */
 .recycling-value-section {
     background-image: url('https://edgarandres.mx/pefna/assets/img/fondo-recicla.png');
@@ -478,6 +383,45 @@
     border-radius: var(--radius-md);
 }
 
+/* Certifications Section */
+.certifications-section {
+    background-color: var(--bg-dark);
+    padding: var(--space-xxl) 0;
+    color: var(--text-light);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.certifications-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-xxl);
+    align-items: center;
+}
+
+.certifications-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.global-logo {
+    max-width: 300px;
+    height: auto;
+}
+
+.certifications-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certification-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .industries-grid,
@@ -516,6 +460,15 @@
     
     .recycling-value-title {
         font-size: 48px;
+    }
+
+    .certifications-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .global-logo {
+        max-width: 250px;
     }
 }
 
@@ -588,5 +541,13 @@
     
     .recycling-box {
         padding: var(--space-md);
+    }
+
+    .certifications-section {
+        padding: var(--space-xl) 0;
+    }
+
+    .global-logo {
+        max-width: 200px;
     }
 }
