@@ -306,6 +306,83 @@
     box-sizing: border-box;
 }
 
+/* Recycling Value Section */
+.recycling-value-section {
+    background-image: url('https://edgarandres.mx/pefna/assets/img/fondo-recicla.png');
+    background-size: cover;
+    background-position: center;
+    padding: var(--space-xxl) 0;
+    position: relative;
+    color: var(--text-light);
+}
+
+.recycling-value-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 26, 50, 0.85);
+}
+
+.recycling-value-content {
+    position: relative;
+    z-index: 1;
+}
+
+.recycling-value-title {
+    font-family: var(--font-family);
+    font-size: 64px;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-bottom: var(--space-xxl);
+    line-height: 1.2;
+    max-width: 800px;
+}
+
+.recycling-boxes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-xxl);
+}
+
+.recycling-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    text-align: center;
+    transition: transform var(--transition-normal);
+}
+
+.recycling-box:hover {
+    transform: translateY(-10px);
+}
+
+.recycling-box h3 {
+    font-family: var(--font-family);
+    font-size: var(--font-size-lg);
+    font-weight: 400;
+    color: var(--text-light);
+    margin-bottom: var(--space-md);
+}
+
+.recycling-box p {
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-base);
+    color: var(--text-light-muted);
+    margin-bottom: var(--space-lg);
+}
+
+.recycling-box img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .industries-grid,
@@ -336,6 +413,14 @@
 
     .locations-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .recycling-boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .recycling-value-title {
+        font-size: 48px;
     }
 }
 
@@ -396,5 +481,17 @@
         font-size: 16px;
         min-height: 80px;
         padding: 15px 0;
+    }
+
+    .recycling-boxes {
+        grid-template-columns: 1fr;
+    }
+    
+    .recycling-value-title {
+        font-size: 36px;
+    }
+    
+    .recycling-box {
+        padding: var(--space-md);
     }
 }
