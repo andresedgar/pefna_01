@@ -264,6 +264,9 @@
     color: var(--text-light);
     font-size: var(--font-size-lg);
     line-height: 1.4;
+    border: 1px solid white;
+    padding: var(--space-sm);
+    margin: 0 var(--space-md);
 }
 
 .locations-description {
