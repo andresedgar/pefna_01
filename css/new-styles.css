@@ -151,45 +151,55 @@
 
 /* What We Do Section */
 .what-we-do-section {
-    background-color: var(--bg-light);
+    background-color: var(--bg-dark);
     padding: var(--space-xxl) 0;
+    color: var(--text-light);
 }
 
-.what-we-do-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-xxl);
-    align-items: center;
-}
-
-.what-we-do-text h2 {
+.gradient-title {
     font-family: var(--font-family);
     font-size: var(--font-size-jumbo);
     font-weight: 400;
-    background: linear-gradient(90deg, #63CC7B, #1935DD);
+    background: linear-gradient(90deg, #27cd71, #0C36E6);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-xxl);
+    text-align: center;
 }
 
-.what-we-do-text p {
-    font-size: var(--font-size-lg);
-    color: #061A32;
-    margin-bottom: var(--space-md);
+.services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.what-we-do-features {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
-}
-
-.feature-item {
-    background-color: #f8f9fa;
+.service-item {
+    background-color: transparent;
     padding: var(--space-lg);
     border-radius: var(--radius-lg);
-    border-left: 4px solid var(--color-primary);
+    text-align: center;
+}
+
+.service-item h3 {
+    font-family: var(--font-family);
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+    color: #27cd71;
+    margin-bottom: var(--space-md);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-lg);
+    display: inline-block;
+    background-color: rgba(39, 205, 113, 0.1);
+}
+
+.service-item p {
+    color: var(--text-light);
+    font-size: var(--font-size-lg);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* By Your Side Section */
@@ -299,5 +309,17 @@
     
     .brand-text {
         font-size: 32px;
+    }
+
+    .gradient-title {
+        font-size: var(--font-size-xxxl);
+    }
+
+    .service-item h3 {
+        font-size: var(--font-size-lg);
+    }
+
+    .service-item p {
+        font-size: var(--font-size-base);
     }
 }
