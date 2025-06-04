@@ -290,6 +290,16 @@
     padding-top: var(--space-xl);
 }
 
+.locations-additional {
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-lg);
+    color: var(--text-light);
+    max-width: 900px;
+    margin: var(--space-md) auto 0;
+    line-height: 1.6;
+    text-align: center;
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .industries-grid,
@@ -371,7 +381,8 @@
     }
 
     .location-card p,
-    .locations-description {
+    .locations-description,
+    .locations-additional {
         font-size: var(--font-size-base);
     }
 }
