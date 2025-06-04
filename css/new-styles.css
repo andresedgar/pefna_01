@@ -232,7 +232,6 @@
 }
 
 .location-card {
-    padding: var(--space-xl);
     border-radius: var(--radius-lg);
     text-align: center;
     display: flex;
