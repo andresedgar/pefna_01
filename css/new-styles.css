@@ -179,7 +179,6 @@
 
 .service-item {
     background-color: transparent;
-    padding: var(--space-lg);
     border-radius: var(--radius-lg);
     text-align: center;
 }
