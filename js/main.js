@@ -47,12 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentSlide = 0;
 
   function showSlide(index) {
-    slides.forEach((slide, i) => {
+    slides.forEach(slide => {
       slide.style.opacity = '0';
-      slide.style.zIndex = '0';
     });
-    slides[index].style.opacity = '1';
-    slides[index].style.zIndex = '1';
+    
+    if (slides[index]) {
+      slides[index].style.opacity = '1';
+    }
   }
 
   function nextSlide() {
@@ -60,10 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentSlide);
   }
 
-  // Initialize first slide
+  // Initialize slider if slides exist
   if (slides.length > 0) {
     showSlide(0);
-    // Auto-advance slides every 4 seconds
     setInterval(nextSlide, 4000);
   }
 });
