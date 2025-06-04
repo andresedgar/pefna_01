@@ -292,8 +292,8 @@
 
 .locations-additional {
     font-family: var(--font-family-text);
-    font-size: 18px;
-    color: #000000;
+    font-size: 28px;
+    color: #061A32;
     max-width: 900px;
     margin: 0 auto 20px;
     line-height: 1.6;
