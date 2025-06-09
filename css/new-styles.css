@@ -288,16 +288,35 @@
     margin: 0 var(--space-md);
 }
 
-.locations-description {
+/* Two-column layout for locations description */
+.locations-description-container {
+    display: flex;
+    gap: var(--space-xl);
+    align-items: flex-start;
+    margin: var(--space-xl) auto 0;
+    max-width: 1200px;
+}
+
+.locations-description-text {
+    flex: 0 0 40%;
     font-family: var(--font-family-text);
     font-size: var(--font-size-lg);
     color: var(--text-light);
-    max-width: 900px;
-    margin: var(--space-xl) auto 0;
     line-height: 1.6;
-    text-align: center;
-    border-top: 1px solid white;
-    padding-top: var(--space-xl);
+    text-align: left;
+    border: none;
+    padding: 0;
+}
+
+.locations-description-image {
+    flex: 0 0 60%;
+}
+
+.locations-description-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
 }
 
 .locations-additional {
@@ -473,6 +492,20 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .locations-description-container {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    .locations-description-text,
+    .locations-description-image {
+        flex: 1 1 100%;
+    }
+
+    .locations-description-text {
+        text-align: center;
+    }
+
     .recycling-boxes {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -555,7 +588,7 @@
     }
 
     .location-card p,
-    .locations-description,
+    .locations-description-text,
     .locations-additional {
         font-size: var(--font-size-base);
     }
@@ -564,6 +597,10 @@
         font-size: 16px;
         min-height: 80px;
         padding: 15px 0;
+    }
+
+    .locations-description-container {
+        gap: var(--space-md);
     }
 
     .recycling-boxes {
